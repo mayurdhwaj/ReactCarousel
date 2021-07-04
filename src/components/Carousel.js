@@ -8,7 +8,9 @@ export default function Carousal() {
 
   return (
     <>
+    {/* Previous Card Button */}
       <button
+        // If the index gets out of bonds (negative), we display last card
         onClick={() => {
           selected == 0
             ? setSelected(CarouselData.length - 1)
@@ -17,6 +19,7 @@ export default function Carousal() {
       >
         <i class="fas fa-chevron-circle-left"></i>
       </button>
+      {/* if selected card is first one, we diplay last one before it, else we show the card at selected-1 index */}
       {selected == 0 ? (
         <CarousalCard
           props={CarouselData[CarouselData.length - 1]}
@@ -25,7 +28,10 @@ export default function Carousal() {
       ) : (
         <CarousalCard props={CarouselData[selected - 1]} selected={false} />
       )}
+      {/* Selected Card in the center */}
       <CarousalCard props={CarouselData[selected]} selected={true} />
+
+      {/* if selected card is last one we diplay first card after it, else the card with selected+1 index */}
       {selected == CarouselData.length - 1 ? (
         <CarousalCard props={CarouselData[0]} selected={false} />
       ) : (

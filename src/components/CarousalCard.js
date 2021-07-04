@@ -2,6 +2,7 @@ import "./CarousalCard.css";
 
 export function CarousalCard(props) {
   return (
+        // Select Class Depending upon the type of Card
         <div className={(props.selected)?"CarousalCardSelected":"CarousalCard"}>
           <div className="CardTopBar"></div>
           <div className="CarousalContent">
