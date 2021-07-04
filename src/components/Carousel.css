@@ -1,0 +1,18 @@
+button {
+  color: #08d9d6;
+  border: none;
+  background-color: #252a34;
+  font-size: 3rem;
+  margin:2%;
+}
+
+button:hover {
+  color: #ff2e63;
+}
+
+@media only screen and (max-width: 1100px) {
+  button {
+    font-size: 2rem;
+    margin:1%;
+  }
+}
